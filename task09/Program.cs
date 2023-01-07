@@ -4,15 +4,27 @@
 // 78 => 8
 // 12 => 2
 // 85 => 8
+int number = new Random().Next(10, 100);
+Console.WriteLine($"Случайное число из диапазона 10 - 99 => {number}");
 
-int num = new Random().Next(10, 100);
-Console.WriteLine($"Случайное число из диапазона 10 - 99 => {num}");
+int MaxDigit(int num)  //num -> number
+{
+    int firstDigit = num / 10;
+    int secondDigit = num % 10;
 
-int firstDigit = num / 10;
-int secondDigit = num % 10;
+    return firstDigit > secondDigit ? firstDigit : secondDigit;
+}
 
-// if (firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа = {firstDigit}");
-// else Console.WriteLine($"Наибольшая цифра числа = {secondDigit}");
+int maxDigit = MaxDigit(number);
 
-int result = firstDigit > secondDigit ? firstDigit : secondDigit;
-Console.Write($"Наибольшая цифра числа = {result}"); 
+// int num = new Random().Next(10, 100);
+// Console.WriteLine($"Случайное число из диапазона 10 - 99 => {num}");
+
+// int firstDigit = num / 10;
+// int secondDigit = num % 10;
+
+// // if (firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа = {firstDigit}");
+// // else Console.WriteLine($"Наибольшая цифра числа = {secondDigit}");
+
+// int result = firstDigit > secondDigit ? firstDigit : secondDigit;
+Console.Write($"Наибольшая цифра числа = {maxDigit}"); 
