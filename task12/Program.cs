@@ -11,7 +11,7 @@ int firstNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе целое число: ");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-void CheckMultiplicity(int number1,int number2)
+void CheckMultiplicity(int number1, int number2)
 {
     if (number1 / number2 == number2)
     {
@@ -25,3 +25,19 @@ void CheckMultiplicity(int number1,int number2)
 }
 
 CheckMultiplicity(firstNumber, secondNumber);
+
+// 2 вариант:
+// bool DivCheck(int number1, int number2)
+// {
+//     return number1 % number2 == 0;
+// }
+
+// if (DivCheck(firstNumber, secondNumber))
+// {
+//     Console.WriteLine($"Число {firstNumber} кратно числу {secondNumber}");
+// }
+// else
+// {
+//     int modulo = firstNumber % secondNumber;
+//     Console.WriteLine($"Число {firstNumber} не кратно числу {secondNumber}. Остаток от деления - {modulo}");
+// }
