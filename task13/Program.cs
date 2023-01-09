@@ -20,12 +20,36 @@ int GetThirdDigit(int num)
     return num;
 }
 
-if (number < 100)
+int GetThirdNegativeDigit(int num)
 {
-    Console.WriteLine($"{number} -> третьей цифры нет");
+    while (num < -999)
+    {
+        num = num / 10;
+    }
+    num = num % 10;
+    return num;   
 }
-else
+
+if (number > 0)
 {
-    Console.WriteLine($"{number} -> {GetThirdDigit(number)}");
+    if (number < 100)
+    {
+        Console.WriteLine($"{number} -> третьей цифры нет");
+    }
+    else
+    {
+        Console.WriteLine($"{number} -> {GetThirdDigit(number)}");
+    }
+}
+else if (number < 0)
+{
+    if (number > -100)
+    {
+        Console.WriteLine($"{number} -> третьей цифры нет");
+    }
+    else
+    {
+        Console.WriteLine($"{number} -> {GetThirdNegativeDigit(number)}");
+    }
 }
 
