@@ -20,4 +20,4 @@ else if (a < b)
 else if (a == b)
 {
     Console.Write($"Число {b} и {a} равны");
-};
+}

@@ -17,18 +17,14 @@ int c = Convert.ToInt32(Console.ReadLine());
 
 int max = a;
 
-if (a > max)
-{
-    max = a;
-}
-else if (b > max)
+if (b > max)
 {
     max = b;
 }
 else if (c > max)
 {
     max = c;
-};
+}
 
 Console.Write("Максимальное число = ");
 Console.Write(max);
