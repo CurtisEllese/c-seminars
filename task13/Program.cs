@@ -22,12 +22,13 @@ int GetThirdDigit(int num)
 
 int GetThirdNegativeDigit(int num)
 {
-    while (num < -999)
+    num = num * -1;
+    while (num > 999)
     {
         num = num / 10;
     }
     num = num % 10;
-    return num;   
+    return num;
 }
 
 if (number > 0)
@@ -43,7 +44,7 @@ if (number > 0)
 }
 else if (number < 0)
 {
-    if (number > -100)
+    if (number > 100)
     {
         Console.WriteLine($"{number} -> третьей цифры нет");
     }
