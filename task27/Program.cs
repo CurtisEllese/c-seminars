@@ -7,28 +7,21 @@
 
 int number = EnterNumber("Введите число: ");
 
-int sumOfDigits = TransformateNegativeNum(number);
+int sumOfDigits = SumOfDigits(number);
 
 Console.WriteLine($"Сумма цифр числа {number} = {sumOfDigits}");
 
 int TransformateNegativeNum(int num)
 {
-    int sumOfDigits = 0;
-    if (num < 0) 
-    {
-        sumOfDigits = SumOfDigits(num * -1);
-    }
-    else
-    {
-        sumOfDigits = SumOfDigits(num);
-    }
-    return sumOfDigits;
+    if (num < 0) num *= -1;
+    return num;
 }
 
 int SumOfDigits(int num)
 {
+    num = TransformateNegativeNum(num);
     int result = 0;
-    for (int i = 0; i <= num; i++)
+    for (int i = num; i > 0; i--)
     {
         int temp = num % 10;
         result += temp;
