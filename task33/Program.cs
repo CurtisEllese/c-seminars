@@ -11,7 +11,7 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (CheckNumInArr(array, number))
-{
+    {
     Console.WriteLine($"{number}; массив {printArray} -> да");
 }
 else 
