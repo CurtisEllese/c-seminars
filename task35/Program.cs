@@ -1,7 +1,7 @@
 ﻿// 1. Задать одномерный массив из 123 случайных чисел.
 // 2. Найти кол-во элементов массива, значения которых лежат в отрезке (10,99).
 
-int[] array = CreateArrayRndInt(123, 0, 200);
+int[] array = CreateArrayRndInt(5, 0, 200);
 PrintArray(array);
 int amountOfNumbers = GetAmountOfNumbers(array, 10, 99);
 
@@ -12,10 +12,7 @@ int GetAmountOfNumbers(int[] arr, int rangeFrom, int rangeTo)
     int result = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] >= rangeFrom && arr[i] <= rangeTo)
-        {
-            result += 1;
-        }
+        if (arr[i] >= rangeFrom && arr[i] <= rangeTo) result ++;
     }
     return result;
 }
