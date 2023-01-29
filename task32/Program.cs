@@ -5,17 +5,16 @@
 int[] array = CreateArrayRndInt(4, -10, 10);
 PrintArray(array);
 
-int[] reverseNumbersArr= ReverseElementsArr(array);
-PrintArray(reverseNumbersArr);
+ChangeOverNumb(array);
+PrintArray(array);
 
 
-int[] ReverseElementsArr(int[] arr)
+void ChangeOverNumb(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = arr[i] * -1;
+        arr[i] = -arr[i];
     }
-    return arr;
 }
 
 int[] CreateArrayRndInt(int size, int min, int max)
