@@ -8,11 +8,11 @@
 // 1     -3,3    8    -9,9
 // 8     7,8    -7,1   9
 
-double[,] array2D = CreateMatrixRndInt(3, 4, -10, 100);
-PrintMatrix(array2D);
+double[,] array2D = CreateMatrixRndDouble(3, 4, -10, 100);
+PrintDoubleMatrix(array2D);
 
 
-double[,] CreateMatrixRndInt(int rows, int col, int min, int max)
+double[,] CreateMatrixRndDouble(int rows, int col, int min, int max)
 {
     double[,] matrix = new double[rows, col];
     Random rnd = new Random();
@@ -26,7 +26,7 @@ double[,] CreateMatrixRndInt(int rows, int col, int min, int max)
     return matrix;
 }
 
-void PrintMatrix(double[,] matrix)
+void PrintDoubleMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
