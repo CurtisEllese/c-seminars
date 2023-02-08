@@ -11,20 +11,24 @@
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 10);
 PrintMatrix(array2D);
 
-GetAverageColumn(array2D);
+string averageColumnArr = GetAverageColumn(array2D);
+Console.WriteLine($"Среднее арифметическое каждого столбца: {averageColumnArr}");
 
-void GetAverageColumn(int[,] matrix)
+
+string GetAverageColumn(int[,] matrix)
 {
+    string result = String.Empty;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        double result = 0;
+        double temp = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            result += matrix[i, j];
+            temp += matrix[i, j];
         }
-        result = Math.Round(result / matrix.GetLength(0), 1);
-        Console.WriteLine($"Среднее арифметическое столбца {j} = {result}");
+        temp = Math.Round(temp / matrix.GetLength(0), 1);
+        result += temp + "; ";
     }
+    return result;
 }
 
 int[,] CreateMatrixRndInt(int rows, int col, int min, int max)
