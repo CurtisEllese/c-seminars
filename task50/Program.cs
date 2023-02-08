@@ -21,14 +21,14 @@ void FindIndex(int[,] matrix)
 {
     int rowIndx = GetEnterNum("Введите индекс строки: ");
     int columnIndx = GetEnterNum("Введите индекс столбца: ");
-    if (rowIndx <= matrix.GetLength(0) && columnIndx <= matrix.GetLength(1))
-    {
-        Console.WriteLine($"{rowIndx}, {columnIndx} -> {matrix[rowIndx, columnIndx]}");
-    }
-    else
+    
+    if (rowIndx < 0 || columnIndx < 0)
     {
         Console.WriteLine($"{rowIndx}, {columnIndx} -> Такого элемента в массиве нет");
-    
+    }
+    else if (rowIndx <= matrix.GetLength(0) && columnIndx <= matrix.GetLength(1))
+    {
+        Console.WriteLine($"{rowIndx}, {columnIndx} -> {matrix[rowIndx, columnIndx]}");
     }
 }
 
