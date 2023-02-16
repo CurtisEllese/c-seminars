@@ -7,8 +7,8 @@
 int numberA = GetEnteredNumber("Введите первое число: ");
 int numberB = GetEnteredNumber("Введите второе число: ");
 
-int aInPowerB = GetAToPowerOfB(numberA, numberB);
-Console.WriteLine(aInPowerB);
+int aInPowerB = GetAToPowerOfB(numberA, Math.Abs(numberB));
+Console.WriteLine(numberB > 0 ? $"Степень = {aInPowerB}" : $"Степень = 1/{aInPowerB}");
 
 int GetAToPowerOfB(int a, int b)
 {
