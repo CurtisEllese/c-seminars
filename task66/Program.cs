@@ -12,10 +12,9 @@ Console.WriteLine($"M = {number1}; N = {number2} -> {sum}");
 
 int SumOfNaturalsRecoursive(int num1, int num2)
 {
-    int result = 0;
     if (num2 == num1) return num2;
-    if (num2 > num1) return SumOfNaturalsRecoursive(num1, num2 - 1) + result + num2;
-    else return SumOfNaturalsRecoursive(num1 - 1, num2) + result + num1;
+    if (num2 > num1) return SumOfNaturalsRecoursive(num1, num2 - 1) + num2;
+    else return SumOfNaturalsRecoursive(num1 - 1, num2) + num1;
 }
 
 int GetEnteredNumber(string text)
